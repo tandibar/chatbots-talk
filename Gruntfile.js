@@ -1,6 +1,6 @@
 /* global module:false */
 module.exports = function(grunt) {
-	var port = grunt.option('port') || 8000;
+	var port = grunt.option('port') || 3123;
 	var root = grunt.option('root') || '.';
 
 	if (!Array.isArray(root)) root = [root];
@@ -131,6 +131,9 @@ module.exports = function(grunt) {
 			},
 			html: {
 				files: root.map(path => path + '/*.html')
+			},
+			slides: {
+				files: root.map(path => path + 'slides/*.html')
 			},
 			markdown: {
 				files: root.map(path => path + '/*.md')
